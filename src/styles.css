@@ -1,1 +1,165 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+
+.selectCol.cmmnScltoptn {
+    position: relative;
+}
+
+.selectCol .slctCust {
+    font-size: 14px;
+    min-height: 31px;
+    height: 26px;
+    /* box-shadow: 0 2px 3px rgba(0, 0, 0, .08); */
+}
+
+.cmmnScltoptn>.slctCust {
+    background: var(--white);
+    width: 100%;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 3px 15px 5px 15px;
+    min-height: 27px;
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+}
+
+.cmmnScltoptn>.slctCust  .iconArrow {
+   border-color: #999999 transparent transparent;
+   border-style: solid;
+   border-width: 6px 5px 2.5px;
+   position: absolute;
+   right: 10px;
+   top: 11px;
+   pointer-events: none;
+}
+
+.selectNG {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 998;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .29);
+    font-size: 14px;
+}
+
+.selectNG .ng-select .ng-select-container {
+    border: none;
+    min-height: 45px;
+    color: #000;
+}
+
+.selectNG .ng-select .ng-select-container .ng-value-container .ng-placeholder {
+    color: #9c9c9c;
+    position: absolute;
+    top: 13px;
+    left: 20px;
+}
+
+.selectNG .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
+    padding: 10px;
+    top: 0;
+    left: 0;
+}
+
+.selectNG .ng-select .ng-select-container .ng-value-container .ng-input>input {
+    border: 1px solid #5a53fd;
+    padding: 2px 15px 2px 5px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.selectNG .ng-select .ng-arrow-wrapper .ng-arrow {
+    display: none
+}
+
+.selectNG .ng-select.cmmnScltoptn .ng-clear-wrapper .ng-clear {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1;
+    pointer-events: none;
+    position: relative;
+    right: -7px;
+    top: 2px;
+}
+
+.selectNG .ng-dropdown-panel .ng-dropdown-panel-items {
+    max-height: 150px;
+    margin-top: 5px
+}
+
+.selectNG .ng-dropdown-panel .ng-dropdown-panel-items b {
+    font-weight: 600 !important
+}
+
+.selectNG .ng-select .ng-select-container {
+    border: none;
+    min-height: 45px;
+    color: var(--black);
+}
+
+.cmmnScltoptn .ng-dropdown-panel.ng-select-bottom {
+    top: 100%;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-color: #e6e6e6;
+    margin-top: -1px
+}
+
+.cmmnScltoptn .ng-dropdown-panel.ng-select-bottom .ng-dropdown-panel-items .ng-option:last-child {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px
+}
+
+.selectNG .ng-dropdown-panel.ng-select-bottom {
+    top: 100%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, .29);
+    border: none
+}
+
+.selectNG .ng-select .ng-dropdown-panel .ng-dropdown-panel-items {
+    max-height: 150px;
+    margin-top: 5px;
+}
+
+.slctCust.is-invalid {
+    border: 1px solid red;
+}
+.cmmnScltoptn .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value .ng-value-label{
+   padding-left: 10px;
+}
+.ngSelectBox .ng-select .ng-select-container{
+   height: 29px;
+   min-height: 29px;
+   border: none;
+   box-shadow: 0 2px 3px rgba(0, 0, 0, .08);
+}
+.ngSelectBox .ng-select{
+   height: 27px;
+   min-height: 27px;
+   box-shadow: none;
+ }
+ .ngSelectBox .ng-select .ng-select-container{
+   height: 25px;
+   min-height: 25px;
+ }
+ .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value{
+   padding-top: 2px;
+ }
+.ngSelectBox .ng-select .ng-clear-wrapper .ng-clear{font-size: 15px;}
+.ngSelectBox .ng-select .ng-clear-wrapper{
+   width: 11px;
+   top: 1px;
+}
