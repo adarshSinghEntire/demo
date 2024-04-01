@@ -1,0 +1,34 @@
+<form  >
+          <!-- ============ controls ============ -->
+            <div class="form-group row">
+              <label for="Code" class="col-sm-4 col-form-label">{{PLACEHOLDER}}  <span class="astrick" *ngIf="isRequired"> *</span></label>
+              <div class="col-sm-8">
+                <div class="selectCol cmmnScltoptn">
+                  <div class="slctCust" (click)="selectVendorNum=true; openSlectBox(selectVendorNums)"
+                  [class.readonly]="isDisabled"
+                  [class.is-invalid]="purchaseOrderForm.hasError('required') && (purchaseOrderForm.touched)">
+                    {{selectedArr ? selectedArr[BIND_By] :""}}
+                    <div class="iconArrow"></div>
+                  </div>
+                
+                  <div [hidden]="!selectVendorNum" class="selectNG">
+                      <ng-select #selectVendorNums  (close)="selectVendorNum=false;" [multiple]="false" placeholder="Search"
+                      [formControl]="purchaseOrderForm" (change)="onVendorChange($event)" >
+                        <ng-option *ngFor="let val of getAllVendorList" [value]="val">
+                          {{val[BIND_By]}}
+                        </ng-option>
+                        <ng-template ng-footer-tmp>
+                          <button class="btn btn-link showAllDRP" (click)="onShowAll('venderNo')">Show All</button>
+                        </ng-template>
+                      </ng-select>
+                  </div>
+               </div>
+                
+                <span class="red"
+                  *ngIf="purchaseOrderForm.hasError('required') && (purchaseOrderForm.touched)">
+                  This field is required.
+                </span>
+              </div>
+            </div>
+          <!-- ===========End =========== -->
+</form>

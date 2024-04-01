@@ -1,0 +1,16 @@
+.red{color: red;}
+
+.twoColumanFileds{
+    input[readonly]{
+        border: none;
+    }
+    input{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+}
+.slctCust.readonly {
+    background-color: #e9ecef;
+    pointer-events: none;
+}
