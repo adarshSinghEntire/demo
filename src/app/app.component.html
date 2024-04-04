@@ -5,11 +5,10 @@
                   (selectedOut)="getData1($event)"></app-common-drp>
         </div>
         
-        
-        <div class="col-md-6">
-            <!-- [setDisabledControl]="true"  -->
-            <app-common-drp [configuration]="configuration2" [getSelectedItem]="selecteddData2"
-              (selectedOut)="getData2($event)"></app-common-drp>
-        </div>
+        <input type="number" [(ngModel)]="numberToConvert" />
+<button (click)="convertNumberToWords(numberToConvert)">Convert</button>
+<p>{{ convertedNumber }}</p>
+
+      
     </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DRP_CONFIG } from './common-drp/common-dropdown';
+import { NumberToWordsService } from './service/number-to-words.service';
 
 @Component({
   selector: 'app-root',
@@ -14,9 +15,10 @@ export class AppComponent {
 
   selecteddData:any;
   selecteddData2:any;
+  convertedNumber = '';
+  numberToConvert:any;
 
-
-  constructor(){
+  constructor(private numToWordsService: NumberToWordsService){
     this.configuration = {
       API: 'https://jsonplaceholder.typicode.com/todos',
       BINDBY: "title",
@@ -54,5 +56,12 @@ export class AppComponent {
   getData2(data:any){
     console.log(data);
   }
+
+
+  convertNumberToWords(num: number) {
+    this.convertedNumber = this.numToWordsService.convert(num);
+  }
+  
+
 
 }
